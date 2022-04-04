@@ -1,0 +1,33 @@
+{
+	"name": "nodelayers",
+	"version": "1.0.0",
+	"description": "Nodejs Lambda Envrionment Layers",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Sagar Barai",
+	"license": "ISC",
+	"dependencies": {
+		"@supercharge/strings": "^1.12.0",
+		"aws-sdk": "^2.609.0",
+		"aws-serverless-express": "^3.3.6",
+		"body-parser": "^1.19.0",
+		"casbin": "^4.2.1",
+		"connect-dynamodb": "^2.0.4",
+		"cookie-parser": "^1.4.5",
+		"cors": "^2.8.5",
+		"crypto": "^1.0.1",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-session": "^1.17.0",
+		"helmet": "^3.23.3",
+		"jsonwebtoken": "^8.5.1",
+		"jenkins-api": "^0.3.1",
+		"mysql2": "^2.1.0",
+		"otplib": "^12.0.0",
+		"qrcode": "^1.4.4",
+		"request": "^2.88.0",
+		"sequelize": "^5.21.3"
+	}
+}

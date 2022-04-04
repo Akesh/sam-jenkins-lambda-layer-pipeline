@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  sam-jenkins-lambda-layers-pipeline
+
+  Sample SAM Template for sam-jenkins-lambda-layers-pipeline
+  
+Parameters:
+  Environment:
+    Type: String
+    Default: DEV
+  FunctionName:
+    Type: String      
+Resources:
+   BlazePulseThirdPartyLibsLayer:
+     Type: AWS::Serverless::LayerVersion
+     Properties:
+         LayerName: !Ref FunctionName
+         Description: Third party dependencies for BlazePulse
+         ContentUri: CMP-ThirdPartyLibs/
+         CompatibleRuntimes:
+           - nodejs12.x
+         LicenseInfo: 'Blazeclan'
+         RetentionPolicy: Retain                  
+
+Outputs:
+  BlazePulseThirdPartyLibsLayerArn:
+    Description: "BlazePulseThirdPartyLibsLayer Lambda Layer ARN"
+    Value: !GetAtt BlazePulseThirdPartyLibsLayer.Arn  
