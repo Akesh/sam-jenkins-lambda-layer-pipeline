@@ -26,4 +26,4 @@ Resources:
 Outputs:
   BlazePulseThirdPartyLibsLayerArn:
     Description: "BlazePulseThirdPartyLibsLayer Lambda Layer ARN"
-    Value: !GetAtt BlazePulseThirdPartyLibsLayer.Arn  
+    Value: !GetAtt BlazePulseThirdPartyLibsLayer  
