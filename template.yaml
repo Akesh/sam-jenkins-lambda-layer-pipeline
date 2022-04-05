@@ -19,11 +19,20 @@ Resources:
          Description: Third party dependencies for BlazePulse
          ContentUri: CMP-ThirdPartyLibs/
          CompatibleRuntimes:
+           - nodejs10.x
            - nodejs12.x
          LicenseInfo: 'Blazeclan'
          RetentionPolicy: Retain                  
-
+   LambdaLayerArn:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: !Sub 
+              - '/${Environment}/CMP-ThirdPartyLibLayerArn'
+              - Environment: !Ref Environment
+      Type: String
+      Value: !Ref BlazePulseThirdPartyLibsLayer
+      Description: SSM Parameter for BlazePulse third party layer ARN.     V
 Outputs:
   BlazePulseThirdPartyLibsLayerArn:
     Description: "BlazePulseThirdPartyLibsLayer Lambda Layer ARN"
-    Value: !GetAtt BlazePulseThirdPartyLibsLayer.Arn  
+    Value: !Ref BlazePulseThirdPartyLibsLayer  
