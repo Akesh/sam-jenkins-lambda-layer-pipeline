@@ -19,6 +19,7 @@ Resources:
          Description: Third party dependencies for BlazePulse
          ContentUri: CMP-ThirdPartyLibs/
          CompatibleRuntimes:
+           - nodejs10.x
            - nodejs12.x
          LicenseInfo: 'Blazeclan'
          RetentionPolicy: Retain                  
